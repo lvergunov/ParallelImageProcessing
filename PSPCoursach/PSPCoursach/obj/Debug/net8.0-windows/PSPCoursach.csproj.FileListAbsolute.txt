@@ -1,0 +1,12 @@
+D:\PSPCoursach\PSPCoursach\bin\Debug\net8.0-windows\PSPCoursach.deps.json
+D:\PSPCoursach\PSPCoursach\bin\Debug\net8.0-windows\PSPCoursach.dll
+D:\PSPCoursach\PSPCoursach\bin\Debug\net8.0-windows\PSPCoursach.pdb
+D:\PSPCoursach\PSPCoursach\obj\Debug\net8.0-windows\PSPCoursach.GeneratedMSBuildEditorConfig.editorconfig
+D:\PSPCoursach\PSPCoursach\obj\Debug\net8.0-windows\PSPCoursach.AssemblyInfoInputs.cache
+D:\PSPCoursach\PSPCoursach\obj\Debug\net8.0-windows\PSPCoursach.AssemblyInfo.cs
+D:\PSPCoursach\PSPCoursach\obj\Debug\net8.0-windows\PSPCoursach.csproj.CoreCompileInputs.cache
+D:\PSPCoursach\PSPCoursach\obj\Debug\net8.0-windows\PSPCoursach.dll
+D:\PSPCoursach\PSPCoursach\obj\Debug\net8.0-windows\refint\PSPCoursach.dll
+D:\PSPCoursach\PSPCoursach\obj\Debug\net8.0-windows\PSPCoursach.pdb
+D:\PSPCoursach\PSPCoursach\obj\Debug\net8.0-windows\ref\PSPCoursach.dll
+D:\PSPCoursach\PSPCoursach\obj\Debug\net8.0-windows\PSPCoursach.csproj.AssemblyReference.cache

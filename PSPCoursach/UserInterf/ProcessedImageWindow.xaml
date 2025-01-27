@@ -1,0 +1,59 @@
+﻿<Window x:Class="UserInterf.ProcessedImageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserInterf"
+        mc:Ignorable="d"
+        Title="ProcessedImageWindow" Height="864" Width="1536"
+        Loaded="WindowLoaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Border Grid.Row="0" Background="LightGray" Padding="5" >
+                <TextBlock Text="Однопоточная обработка изображения"  
+                       FontSize="30" 
+                       FontWeight="Bold" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="0 20 0 5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" Width="900" Height="550">
+                <Image x:Name="ProcessedImageField"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" Margin="0 10 0 0">
+            <TextBlock x:Name="OutputTextBlock" Width="700" Height="50" FontSize="20" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="3" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Button Width="280" Height="60" Click="CloseThisWindow">
+                    <TextBlock Text="Закрыть" FontSize="20"/>
+                </Button>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Button Width="280" Height="60">
+                    <TextBlock Text="Сохранить изображение" FontSize="20"/>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

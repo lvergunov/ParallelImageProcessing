@@ -1,0 +1,62 @@
+﻿<Window x:Class="UserInterf.MultyProcessingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserInterf"
+        mc:Ignorable="d"
+        Title="MultyProcessingWindow" Height="1080" Width="1920"
+        WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="LightGray" Padding="10" Height="100">
+            <TextBlock Text="Сетевая обработка изображения"  
+                   FontSize="36" 
+                   FontWeight="Bold" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" Height="700" Width="1300">
+                <Image x:Name="LoadedImage" Visibility="Collapsed"/>
+                <Button x:Name="ButtonToLoadImg" Width="550" Height="100" Click="LoadImage">
+                    <TextBlock Text="ЗАГРУЗИТЬ ИЗОБРАЖЕНИЕ" FontSize="40" TextWrapping="Wrap"></TextBlock>
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="3" Margin="60">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Button x:Name="LoadImageButton" Height="100" Width="600" Click="CompletePocessings">
+                    <TextBlock Text="ПРИМЕНИТЬ ФИЛЬТР" FontSize="45" TextWrapping="Wrap"/>
+                </Button>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Button x:Name="BackButton" Height="100" Width="600" Click="BackToMainMenu">
+                    <TextBlock Text="ВЕРНУТЬСЯ В ГЛАВНОЕ МЕНЮ" FontSize="40" TextWrapping="Wrap"/>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
