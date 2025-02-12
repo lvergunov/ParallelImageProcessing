@@ -50,7 +50,7 @@
             </Grid>
 
             <Grid Grid.Column="1">
-                <Button Width="280" Height="60">
+                <Button x:Name="SaveImage" Width="280" Height="60" Click="SaveImage_Click">
                     <TextBlock Text="Сохранить изображение" FontSize="20"/>
                 </Button>
             </Grid>

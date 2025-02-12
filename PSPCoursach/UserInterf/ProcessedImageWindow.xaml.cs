@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -72,6 +73,42 @@ namespace UserInterf
             }
 
             return bitmapImage;
+        }
+
+        private void SaveImage_Click(object sender, RoutedEventArgs e)
+        {
+            if (ProcessedImageField.Source is BitmapImage bitmap)
+            {
+
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "PNG Image|*.png|JPEG Image|*.jpg|Bitmap Image|*.bmp",
+                    Title = "Save Image",
+                    FileName = "image.png"
+                };
+                if (saveFileDialog.ShowDialog() == true)
+                {
+                    BitmapEncoder encoder = new PngBitmapEncoder();
+                    switch (System.IO.Path.GetExtension(saveFileDialog.FileName).ToLower())
+                    {
+                        case ".jpg":
+                            encoder = new JpegBitmapEncoder();
+                            break;
+                        case ".bmp":
+                            encoder = new BmpBitmapEncoder();
+                            break;
+                    }
+                    encoder.Frames.Add(BitmapFrame.Create(bitmap));
+
+                    using (FileStream fileStream = new FileStream(saveFileDialog.FileName, FileMode.Create))
+                    {
+                        encoder.Save(fileStream);
+                    }
+                }
+            }
+            else {
+                MessageBox.Show("Ошибка формата изображения!");
+            }
         }
     }
 }
